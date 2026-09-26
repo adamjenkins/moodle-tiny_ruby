@@ -1,0 +1,84 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template tiny_ruby/editdialog
+
+    The Furigana dialog: the word and its reading, written as filter_ruby inline markup.
+
+    Data attributes required for JS:
+    * data-field="base", data-field="reading"
+    * data-feedback="base", data-feedback="reading", data-warning="reading"
+    * data-action="save", data-action="remove", data-action="cancel"
+
+    Context variables required for this template:
+    * elementid - unique id prefix for the fields
+    * base - the word (may be empty)
+    * reading - the reading (may be empty)
+    * isediting - whether existing markup is being edited, which offers Remove
+    * formattinglost - whether the selection had formatting that will be lost
+    * multiline - whether the selection spans lines, which cannot become one word
+    * skipzone - whether the caret is where the filter does not render furigana
+
+    Example context (json):
+    {
+        "elementid": "id_introeditor_tiny_ruby",
+        "base": "漢字",
+        "reading": "かんじ",
+        "isediting": true,
+        "formattinglost": false,
+        "multiline": false,
+        "skipzone": false
+    }
+}}
+{{< core/modal }}
+    {{$title}}{{#str}} buttontitle, tiny_ruby {{/str}}{{/title}}
+    {{$body}}
+        <form novalidate>
+            {{#multiline}}
+                <div class="alert alert-danger" role="alert">{{#str}} error_multiline, tiny_ruby {{/str}}</div>
+            {{/multiline}}
+            {{#skipzone}}
+                <div class="alert alert-warning" role="alert">{{#str}} warning_skipzone, tiny_ruby {{/str}}</div>
+            {{/skipzone}}
+            {{#formattinglost}}
+                <div class="alert alert-warning" role="alert">{{#str}} formattinglost, tiny_ruby {{/str}}</div>
+            {{/formattinglost}}
+            <div class="mb-3">
+                <label for="{{elementid}}_base">{{#str}} base, tiny_ruby {{/str}}</label>
+                <input type="text" class="form-control" id="{{elementid}}_base" data-field="base" value="{{base}}"
+                    lang="ja" autocomplete="off" aria-describedby="{{elementid}}_base_error">
+                <div class="invalid-feedback" id="{{elementid}}_base_error" data-feedback="base"></div>
+            </div>
+            <div class="mb-3">
+                <label for="{{elementid}}_reading">{{#str}} reading, tiny_ruby {{/str}}</label>
+                <input type="text" class="form-control" id="{{elementid}}_reading" data-field="reading" value="{{reading}}"
+                    lang="ja" autocomplete="off"
+                    aria-describedby="{{elementid}}_reading_help {{elementid}}_reading_error {{elementid}}_reading_warning">
+                <div class="invalid-feedback" id="{{elementid}}_reading_error" data-feedback="reading"></div>
+                <div class="alert alert-warning mt-2 mb-0" id="{{elementid}}_reading_warning" data-warning="reading" hidden></div>
+                <div class="form-text text-muted" id="{{elementid}}_reading_help">{{#str}} reading_help, tiny_ruby {{/str}}</div>
+            </div>
+        </form>
+    {{/body}}
+    {{$footer}}
+        {{#isediting}}
+            <button type="button" class="btn btn-outline-danger" data-action="remove">{{#str}} remove, tiny_ruby {{/str}}</button>
+        {{/isediting}}
+        <button type="button" class="btn btn-secondary" data-action="cancel">{{#str}} cancel, core {{/str}}</button>
+        <button type="button" class="btn btn-primary" data-action="save">{{#str}} save, tiny_ruby {{/str}}</button>
+    {{/footer}}
+{{/ core/modal }}
