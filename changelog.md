@@ -5,11 +5,18 @@ documented here. Entries are ordered newest-first.
 
 ---
 
-## [Unreleased]
+## [0.1.1] - 2026-09-27
+
+### Added
+
+- `composer.json` (package `adamjenkins/moodle-tiny_ruby`, type `moodle-tiny`),
+  for installation from Packagist. It requires `adamjenkins/moodle-filter_ruby`
+  `^1.0`, matching the `filter_ruby` dependency in `version.php`.
 
 ### Changed
 
 - Declare Moodle 5.3 support (`$plugin->supported` is now `[405, 503]`).
+- Continuous integration also runs Moodle `main` (5.3beta), non-blocking.
 
 ## [0.1.0] - 2026-09-27
 
