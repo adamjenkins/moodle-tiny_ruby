@@ -1,6 +1,6 @@
 # Changes
 
-## Unreleased (0.1.0)
+## v0.1.0 (2026092700)
 
 - Initial version, a companion to the Ruby (furigana) filter (`filter_ruby`).
 - **Furigana** dialog (toolbar and Insert menu): adds, changes and removes the
@@ -13,4 +13,5 @@
   use are written as comments instead. For teachers who can manage the course's
   filters, it links to the course word list.
 - Admin setting for the syntax the dialog writes.
-- Requires Moodle 4.5 or later and `filter_ruby`.
+- Requires Moodle 4.5 or later and `filter_ruby`. Continuous integration tests
+  Moodle 5.2 (PHP 8.3 and 8.4, MariaDB and PostgreSQL).

@@ -5,7 +5,7 @@ documented here. Entries are ordered newest-first.
 
 ---
 
-## [Unreleased] — 0.1.0
+## [0.1.0] - 2026-09-27
 
 ### Added
 
@@ -20,3 +20,5 @@ documented here. Entries are ordered newest-first.
 - Admin setting `tiny_ruby/syntax` (`braces` by default, or `aozora`).
 - PHPUnit tests for the configuration and privacy provider. Behat features for
   editing, the word list, and a contract suite that runs the real filter.
+- GitHub Actions moodle-plugin-ci workflow for MOODLE_502_STABLE (PHP 8.3 with
+  MariaDB 10.11, PHP 8.4 with PostgreSQL 16), installing filter_ruby first.
