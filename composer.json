@@ -1,0 +1,11 @@
+{
+    "name": "adamjenkins/moodle-tiny_ruby",
+    "description": "A TinyMCE editor plugin for Moodle that edits the Ruby (furigana) filter's inline markup through a dialog and copies a word list of the text's readings",
+    "type": "moodle-tiny",
+    "require": {
+        "moodle/moodle": ">=4.5 <5.4",
+        "moodle/composer-installer": "^1.0",
+        "adamjenkins/moodle-filter_ruby": "^1.0"
+    },
+    "license": "GPL-3.0-or-later"
+}
