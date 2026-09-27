@@ -5,6 +5,12 @@ documented here. Entries are ordered newest-first.
 
 ---
 
+## [Unreleased]
+
+### Changed
+
+- Declare Moodle 5.3 support (`$plugin->supported` is now `[405, 503]`).
+
 ## [0.1.0] - 2026-09-27
 
 ### Added

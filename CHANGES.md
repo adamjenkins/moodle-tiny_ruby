@@ -1,5 +1,9 @@
 # Changes
 
+## Unreleased
+
+- Declare Moodle 5.3 support.
+
 ## v0.1.0 (2026092700)
 
 - Initial version, a companion to the Ruby (furigana) filter (`filter_ruby`).

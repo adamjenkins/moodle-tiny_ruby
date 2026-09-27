@@ -19,7 +19,7 @@ A TinyMCE editor plugin for Moodle that works with the
 Requirements
 ------------
 
-- Moodle 4.5 to 5.2.
+- Moodle 4.5 to 5.3.
 - The Ruby (furigana) filter, `filter_ruby`, which this plugin depends on.
 
 Settings
