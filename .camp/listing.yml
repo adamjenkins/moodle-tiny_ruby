@@ -1,0 +1,24 @@
+# camp listing manifest — descriptive content for your plugin's page.
+# Edit freely and commit; camp ingests this file at each tagged release.
+# Schema: https://camp-registry.org/schema/listing.schema.json
+name: tiny_ruby
+summary: 'A TinyMCE editor plugin for adding and editing furigana markup for the Ruby (furigana) filter, and copying a text''s readings as a word list.'
+description: |
+  A companion to the Ruby (furigana) filter (filter_ruby), which it requires.
+  It adds two editor tools for teachers writing Japanese content:
+
+  - Furigana: a dialog that adds, changes or removes the filter's inline markup
+    on the selected word, in brace or Aozora Bunko syntax (a site setting).
+  - Furigana word list: collects every reading in the text as a word=reading
+    list, ready to paste into a course word list of the filter.
+labels:
+  # Required disclosure labels — pick all that apply (RFC §4.7):
+  #   fully-free | freemium | paid-service | external-account
+  #   donation-supported | commercial-support-available
+  - fully-free
+# screenshots:
+#   - path: .camp/screenshots/overview.png
+#     caption: Main view
+links:
+  docs: https://github.com/adamjenkins/moodle-tiny_ruby#readme
+  issues: https://github.com/adamjenkins/moodle-tiny_ruby/issues
