@@ -5,6 +5,22 @@ documented here. Entries are ordered newest-first.
 
 ---
 
+## [0.1.2] - 2026-10-04
+
+### Added
+
+- `.camp/listing.yml`, the plugin's listing content on the camp registry (camp-registry.org), and
+  a camp release workflow (`.github/workflows/camp-release.yml`) that publishes each tagged
+  release there.
+
+### Changed
+
+- Maturity is now Beta (`MATURITY_BETA`); it was Alpha.
+- composer.json requires `moodle/moodle` `^4.5 || ^5.0` instead of `>=4.5 <5.4`: the explicit
+  upper cap is dropped so later Moodle 5.x releases are not excluded.
+- CI tests `MOODLE_503_STABLE` (PHP 8.3–8.4, PostgreSQL 17, MariaDB 11.4) instead of Moodle
+  `main`, now that Moodle 5.3 is released.
+
 ## [0.1.1] - 2026-09-27
 
 ### Added
