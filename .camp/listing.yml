@@ -16,9 +16,13 @@ labels:
   #   fully-free | freemium | paid-service | external-account
   #   donation-supported | commercial-support-available
   - fully-free
-# screenshots:
-#   - path: .camp/screenshots/overview.png
-#     caption: Main view
+screenshots:
+  - path: .camp/screenshots/01-editor-buttons.png
+    caption: 'The Furigana and Furigana word list buttons in TinyMCE, next to text with inline furigana markup'
+  - path: .camp/screenshots/02-furigana-dialog.png
+    caption: 'With the cursor in existing markup, the Furigana dialog opens pre-filled to change or remove the reading'
+  - path: .camp/screenshots/03-word-list-dialog.png
+    caption: 'Furigana word list: the text''s readings as word=reading lines, ready to paste into the course word list'
 links:
   docs: https://github.com/adamjenkins/moodle-tiny_ruby#readme
   issues: https://github.com/adamjenkins/moodle-tiny_ruby/issues
