@@ -5,6 +5,24 @@ documented here. Entries are ordered newest-first.
 
 ---
 
+## [0.1.3] - 2026-10-12
+
+### Added
+
+- Plugin icon `pix/icon.svg` (a reading bar above 漢, the Furigana button's
+  glyph), shown on the plugins overview page.
+- Marketplace release workflow (`.github/workflows/moodle-release.yml`): pushing
+  a `v*` tag publishes the release to the Moodle Plugins directory, as a ZIP whose
+  root folder is `ruby`.
+- Screenshots in the camp listing (`.camp/screenshots/`, `.camp/listing.yml`).
+- README: Installation and Support sections.
+
+### Fixed
+
+- README: the list of word-list entries written as comments now includes words
+  that do not start with a kanji, words containing `＝` and entries containing a
+  line break, as the code does.
+
 ## [0.1.2] - 2026-10-04
 
 ### Added

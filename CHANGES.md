@@ -1,11 +1,11 @@
 # Changes
 
-## v0.1.2 (2026100400)
+## v0.1.3 (2026101200)
 
-- The plugin's maturity is now Beta (it was Alpha).
-- composer.json now requires `moodle/moodle` `^4.5 || ^5.0` rather than `>=4.5 <5.4`, so later
-  Moodle 5.x releases are no longer excluded.
-- Releases are now also published to the camp plugin registry (camp-registry.org), with the
-  plugin's listing text kept in `.camp/listing.yml`.
-- Continuous integration now tests against the released Moodle 5.3 (`MOODLE_503_STABLE`) instead
-  of Moodle's development branch.
+- The plugin now has an icon (`pix/icon.svg`), shown on *Site administration →
+  Plugins → Plugins overview*.
+- Pushing a release tag now also publishes the release to the Moodle Plugins
+  directory, as a ZIP whose root folder is `ruby`.
+- The camp registry listing now has screenshots.
+- README: installation steps, a support link, and the full list of entries the
+  word list writes as comments.

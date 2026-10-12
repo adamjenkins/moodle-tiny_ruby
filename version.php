@@ -24,10 +24,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2026100400;
+$plugin->version   = 2026101200;
 $plugin->requires  = 2024100700; // Moodle 4.5.
 $plugin->supported = [405, 503];
 $plugin->component = 'tiny_ruby';
 $plugin->maturity  = MATURITY_BETA;
-$plugin->release   = '0.1.2';
+$plugin->release   = '0.1.3';
 $plugin->dependencies = ['filter_ruby' => 2026090800];

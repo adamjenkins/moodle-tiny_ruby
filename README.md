@@ -22,6 +22,16 @@ Requirements
 - Moodle 4.5 to 5.3.
 - The Ruby (furigana) filter, `filter_ruby`, which this plugin depends on.
 
+Installation
+------------
+
+Install the Ruby (furigana) filter first. Then install this plugin from
+*Site administration → Plugins → Install plugins*, or extract the ZIP into
+`lib/editor/tiny/plugins/ruby/` (Moodle 4.5 – 5.0) or
+`public/lib/editor/tiny/plugins/ruby/` (Moodle 5.1 and later), and go to
+*Site administration → Notifications* to complete the install. The two buttons
+then appear in TinyMCE for every user with the `tiny/ruby:use` capability.
+
 Settings
 --------
 
@@ -47,9 +57,11 @@ How the word list is built
   in the filter's list, and the others are noted in a `#` comment above it.
 - An entry with an empty reading, such as `{金|}`, is listed as `金=`. In the
   filter that means "leave this word alone".
-- Anything the filter's word list would reject is written as a `#` comment
-  instead of an entry, so the paste always saves. That is a word longer than
-  32 characters, a word containing `=`, or a word starting with `#`.
+- Anything the filter's word list would reject, or could never match, is
+  written as a `#` comment instead of an entry, so the paste always saves. That
+  is a word longer than 32 characters, a word containing `=` or `＝`, a word
+  starting with `#`, an entry containing a line break, and a word that does not
+  start with a kanji (such as お茶): the filter only looks words up from a kanji.
 - The list is editable in the dialog before you copy it. On a site served over
   plain HTTP the browser's clipboard API is not available, so the dialog falls
   back to selecting the text for Ctrl+C / ⌘C.
@@ -58,6 +70,12 @@ Privacy
 -------
 
 The plugin stores no personal data.
+
+Support
+-------
+
+Bug reports and feature requests:
+<https://github.com/adamjenkins/moodle-tiny_ruby/issues>
 
 License
 -------
